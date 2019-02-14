@@ -7,10 +7,15 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
+ext.ktor_version = '1.1.1'
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile "io.ktor:ktor-server-core:$ktor_version"
+    compile "io.ktor:ktor-server-netty:$ktor_version"
+    compile 'org.slf4j:slf4j-nop:1.7.25'
 }
 
 compileKotlin {
